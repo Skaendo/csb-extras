@@ -1,0 +1,12 @@
+           |-----handy-ruler------------------------------------------------------|
+nemo-python: nemo-python (libnemo-extension Python bindings)
+nemo-python:
+nemo-python: These are unstable bindings for the Nemo extension library.
+nemo-python:
+nemo-python: For examples and documentation check the examples sub directory.
+nemo-python:
+nemo-python: As of nemo-python 0.7.0, scripts are also loaded from
+nemo-python: $XDG_DATA_DIR/nemo-python/extensions, which includes ~/.local/share
+nemo-python: and /usr/share (or whatever your $XDG_DATA_DIR is set to).
+nemo-python:
+nemo-python: Project URL: https://github.com/linuxmint/nemo-extensions

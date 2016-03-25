@@ -21,7 +21,7 @@ They include;
  * Nemo file-roller extension
  * Nemo python
  
- * And more to come.....
+ * And more to come......
 
 
 Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.

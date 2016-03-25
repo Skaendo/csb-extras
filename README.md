@@ -23,6 +23,6 @@ They include;
  * And more to come......
 
 
-Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.
-Linux is a registered trademark of Linus Torvalds
+Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.<br>
+Linux is a registered trademark of Linus Torvalds<br>
 Linux Mint is copyright of someone??

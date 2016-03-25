@@ -29,7 +29,7 @@
 
 # Set to 1 if you'd like to install/upgrade package as they are built.
 # This is recommended.
-INST=0
+INST=1
 
 # This is where all the compilation and final results will be placed
 TMP=${TMP:-/tmp/csb}

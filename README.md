@@ -22,7 +22,7 @@ They include;
  * Nemo python
  * And more to come......
 
-
+<br><br><br>
 Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.<br>
 Linux is a registered trademark of Linus Torvalds<br>
 Linux Mint is copyright of someone??

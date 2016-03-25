@@ -20,7 +20,6 @@ They include;
  * Nemo folder emblems
  * Nemo file-roller extension
  * Nemo python
- 
  * And more to come......
 
 

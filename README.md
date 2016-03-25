@@ -15,11 +15,11 @@ They include;
 
  * The sound scheme from Linux Mint 17.3 Cinnamon
  * Mint GTK3 themes (Window borders etc.)
- * Mint themes
- * Mint "x" icons
+ * Mint "X" Themes
+ * Mint "X" Icons
  * Nemo folder emblems
- * Nemo file-roller extension
- * Nemo python
+ * Nemo File-Roller extension
+ * Nemo Python
  * And more to come......
 
 <br><br><br>

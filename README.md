@@ -13,7 +13,7 @@ https://github.com/willysr/csb/tree/development
 
 They include;
 
- * The sound scheme from Linux Mint 17.3 Cinnamon
+ * The sound scheme from Linux Mint 17.x Cinnamon
  * Mint GTK3 themes (Window borders etc.)
  * Mint "X" Themes
  * Mint "X" Icons

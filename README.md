@@ -22,9 +22,9 @@ They include;
  * Nemo Python
  * And more to come......
 
-<br><br>
-If you look at the scripts you will see that I am not very good at building SlackBuild scripts, so tips, pointers and tutoring appreciated and welcomed.<br>
-
+<br>
+If you look at the scripts you will notice that I am not very good at building SlackBuild scripts, so tips, pointers and tutoring appreciated and welcomed.<br>
+<br>
 
 Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.<br>
 Linux is a registered trademark of Linus Torvalds<br>

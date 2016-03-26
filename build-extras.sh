@@ -41,6 +41,7 @@ CSBROOT=$(pwd)
 # Loop for all packages
 for dir in \
   nemo-python \
+  folder-color-switcher
   mint-sounds \
   mint-themes \
   mint-themes-gtk3 \

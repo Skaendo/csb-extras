@@ -7,7 +7,7 @@ USE AT YOUR OWN RISK!
 
 Now that that is out of the way,
 
-These addons or extras will add some functionality to the Cinnamon SlackBuilds (development branch and probably only x86_64) by WillySR that can be found here:
+These addons or extras will add some functionality and style to the Cinnamon SlackBuilds (development branch and probably only x86_64) by WillySR that can be found here:
 
 https://github.com/willysr/csb/tree/development
 

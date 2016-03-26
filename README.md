@@ -21,6 +21,8 @@ They include;
  * Nemo File-Roller extension
  * Nemo Python
  * And more to come......
+ 
+If you look at the scripts you will see that I am not very good at building SlackBuild scripts, so tips, pointers and tutoring appreciated and welcomed. 
 
 <br><br><br>
 Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.<br>

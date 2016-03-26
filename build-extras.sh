@@ -47,6 +47,7 @@ for dir in \
   mint-x-icons \
   nemo-emblems \
   nemo-fileroller \
+  nemo-share \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

@@ -25,7 +25,7 @@
 
 PRGNAM=nemo-python
 VERSION=${VERSION:-2.8.0}
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-endo}
 
 if [ -z "$ARCH" ]; then
@@ -71,25 +71,7 @@ $TMP/nemo-python-2.8.0+rosa/autogen.sh
 
 make
 
-make install
-
-mkdir -p $PKG/usr/lib64/nemo/extensions-3.0
-cp /usr/lib64/nemo/extensions-3.0/libnemo-python.so $PKG/usr/lib64/nemo/extensions-3.0
-cp /usr/lib64/nemo/extensions-3.0/libnemo-python.la $PKG/usr/lib64/nemo/extensions-3.0
-
-mkdir -p $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/README $PKG/usr/share/doc/nemo-python
-cp /usr/share/doc/nemo-python/examples/background-image.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/block-size-column.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/location-widget-provider.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/md5sum-property-page.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/open-terminal.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/submenu.py $PKG/usr/share/doc/nemo-python/examples
-cp /usr/share/doc/nemo-python/examples/update-file-info-async.py $PKG/usr/share/doc/nemo-python/examples
-
-mkdir -p $PKG/usr/lib/pkgconfig
-cp /usr/lib/pkgconfig/nemo-python.pc $PKG/usr/lib/pkgconfig
-
+make install DESTDIR=$PKG
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild

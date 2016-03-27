@@ -40,12 +40,14 @@ CSBROOT=$(pwd)
 
 # Loop for all packages
 for dir in \
+  libnemo-extension-dev \
   nemo-python \
   folder-color-switcher
   mint-sounds \
   mint-themes \
   mint-themes-gtk3 \
   mint-x-icons \
+  nemo-dropbox \
   nemo-emblems \
   nemo-fileroller \
   nemo-share \

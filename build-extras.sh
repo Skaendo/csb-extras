@@ -40,17 +40,20 @@ CSBROOT=$(pwd)
 
 # Loop for all packages
 for dir in \
-  libnemo-extension-dev \
   nemo-python \
-  folder-color-switcher
+  folder-color-switcher \
   mint-sounds \
   mint-themes \
   mint-themes-gtk3 \
   mint-x-icons \
+  libnemo-extension-dev \
   nemo-dropbox \
   nemo-emblems \
   nemo-fileroller \
+  libcryptui \
+  nemo-seahorse \
   nemo-share \
+  nemo-terminal \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

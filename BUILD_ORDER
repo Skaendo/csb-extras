@@ -1,11 +1,14 @@
-libnemo-extension-dev
 nemo-python
 folder-color-switcher
 mint-sounds
 mint-themes
 mint-themes-gtk3
 mint-x-icons
+libnemo-extension-dev
 nemo-dropbox
 nemo-emblems
 nemo-fileroller
+libcryptui
+nemo-seahorse
 nemo-share
+nemo-terminal

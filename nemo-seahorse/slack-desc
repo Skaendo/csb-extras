@@ -1,0 +1,19 @@
+# HOW TO EDIT THIS FILE:
+# The "handy ruler" below makes it easier to edit a package description.  Line
+# up the first '|' above the ':' following the base package name, and the '|' on
+# the right side marks the last column you can put a character in.  You must make
+# exactly 11 lines for the formatting to be correct.  It's also customary to
+# leave one space after the ':'.
+
+             |-----handy-ruler------------------------------------------------------|
+nemo-seahorse: nemo-seahorse (OpenPGP extension for Nemo)
+nemo-seahorse:
+nemo-seahorse: nemo-seahorse is an extension for Nemo which allows encryption
+nemo-seahorse: and decryption of OpenPGP files using GnuPG.
+nemo-seahorse:
+nemo-seahorse: nemo-seahorse is a fork of seahorse-nautilus 3.3.1.
+nemo-seahorse:
+nemo-seahorse:
+nemo-seahorse:
+nemo-seahorse: Project Link: https://github.com/linuxmint/nemo-extensions
+nemo-seahorse:

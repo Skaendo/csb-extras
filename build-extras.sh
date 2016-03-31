@@ -53,7 +53,6 @@ for dir in \
   libcryptui \
   nemo-seahorse \
   nemo-share \
-  nemo-terminal \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

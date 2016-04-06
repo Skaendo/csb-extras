@@ -26,10 +26,15 @@ Nemo extensions (functional)
  * nemo-fileroller
  * nemo-python
  * nemo-share
+
+Nemo extensions (included but not functional)
+
+ * nemo-seahorse
  
+
 And more to come......
 
-More info about these addons and extensions can be found here:
+More info about these addons and extensions can be found here:<br>
 https://github.com/linuxmint
 
 <br>

@@ -18,10 +18,19 @@ They include;
  * Mint GTK3 themes (Window borders etc.)
  * Mint "X" Themes
  * Mint "X" Icons
- * Nemo folder emblems
- * Nemo File-Roller extension
- * Nemo Python
- * And more to come......
+ 
+Nemo extensions (functional)
+
+ * nemo-dropbox
+ * nemo-emblems
+ * nemo-fileroller
+ * nemo-python
+ * nemo-share
+ 
+And more to come......
+
+More info about these addons and extensions can be found here:
+https://github.com/linuxmint
 
 <br>
 If you look at the scripts you will notice that I am not very good at building SlackBuild scripts, so tips, pointers and tutoring appreciated and welcomed.<br>

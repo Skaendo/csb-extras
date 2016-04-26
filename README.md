@@ -25,7 +25,7 @@ Nemo extensions (functional)
  * nemo-emblems
  * nemo-fileroller
  * nemo-python
- * nemo-share
+ * nemo-share (needs testing)
 
 Nemo extensions (included but not functional)
 

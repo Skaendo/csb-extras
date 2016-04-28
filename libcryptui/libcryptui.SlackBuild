@@ -36,4 +36,4 @@ chmod +x $TMP/libcryptui/libcryptui.SlackBuild
 
 $TMP/libcryptui/libcryptui.SlackBuild
 
-installpkg /tmp/libcryptui-3.8.0-x86_64-1_SBo.tgz
+upgradepkg --reinstall --install-new /tmp/libcryptui-3.8.0-x86_64-1_SBo.tgz

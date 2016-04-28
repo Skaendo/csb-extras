@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-seahorse
-VERSION=${VERSION:-2.8.0}
+VERSION=${VERSION:-3.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,15 +61,15 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-seahorse/nemo-seahorse_2.8.0+rosa.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-seahorse/nemo-seahorse_3.0.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-seahorse_2.8.0+rosa.tar.gz -C $TMP/
+tar -xvf $TMP/nemo-seahorse_3.0.0+betsy.tar.gz -C $TMP/
 
-cd $TMP/nemo-seahorse-2.8.0+rosa
+cd $TMP/nemo-seahorse-3.0.0+betsy
 
-$TMP/nemo-seahorse-2.8.0+rosa/autogen.sh
+$TMP/nemo-seahorse-3.0.0+betsy/autogen.sh
 
 ./configure
 
@@ -86,12 +86,12 @@ cp -R $TMP/package-nemo-seahorse/usr/local/share $TMP/package-nemo-seahorse/usr
 rm -rf $TMP/package-nemo-seahorse/usr/local
 
 mkdir -p $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse
-cp $TMP/nemo-seahorse-2.8.0+rosa/debian/copyright $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse/copyright
-cp $TMP/nemo-seahorse-2.8.0+rosa/debian/changelog $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse/changelog
+cp $TMP/nemo-seahorse-3.0.0+betsy/debian/copyright $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse/copyright
+cp $TMP/nemo-seahorse-3.0.0+betsy/debian/changelog $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse/changelog
 gzip -9 $TMP/package-nemo-seahorse/usr/share/doc/nemo-seahorse/changelog
 
 mkdir -p $TMP/package-nemo-seahorse/usr/share/lintian/
-cp $TMP/nemo-seahorse-2.8.0+rosa/debian/nemo-seahorse.lintian-overrides $TMP/package-nemo-seahorse/usr/share/lintian/nemo-seahorse
+cp $TMP/nemo-seahorse-3.0.0+betsy/debian/nemo-seahorse.lintian-overrides $TMP/package-nemo-seahorse/usr/share/lintian/nemo-seahorse
 
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION

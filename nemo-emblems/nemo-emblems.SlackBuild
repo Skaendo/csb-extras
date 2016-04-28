@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-emblems
-VERSION=${VERSION:-2.8.1}
+VERSION=${VERSION:-3.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,13 +61,13 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-emblems/nemo-emblems_2.8.1+rosa.tar.gz
-tar -xvf nemo-emblems_2.8.1+rosa.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-emblems/nemo-emblems_3.0.0+betsy.tar.gz
+tar -xvf nemo-emblems_3.0.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/nemo-python/extensions
-mv /tmp/csb/nemo-emblems-2.8.1+rosa/nemo-extension/nemo-emblems.py $PKG/usr/share/nemo-python/extensions
+mv /tmp/csb/nemo-emblems-3.0.0+betsy/nemo-extension/nemo-emblems.py $PKG/usr/share/nemo-python/extensions
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild

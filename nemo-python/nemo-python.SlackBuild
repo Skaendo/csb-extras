@@ -24,8 +24,8 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-python
-VERSION=${VERSION:-2.8.0}
-BUILD=${BUILD:-2}
+VERSION=${VERSION:-3.0.0}
+BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
 if [ -z "$ARCH" ]; then
@@ -61,13 +61,13 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_2.8.0+rosa.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.0.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-python_2.8.0+rosa.tar.gz -C $TMP/
+tar -xvf $TMP/nemo-python_3.0.0+betsy.tar.gz -C $TMP/
 
-$TMP/nemo-python-2.8.0+rosa/autogen.sh
+$TMP/nemo-python-3.0.0+betsy/autogen.sh
 
 make
 

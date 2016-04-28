@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-share
-VERSION=${VERSION:-2.8.1}
+VERSION=${VERSION:-3.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,21 +61,21 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_2.8.1+rosa.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_3.0.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-share_2.8.1+rosa.tar.gz -C $TMP
-cd $TMP/nemo-share-2.8.1+rosa
-$TMP/nemo-share-2.8.1+rosa/autogen.sh
+tar -xvf $TMP/nemo-share_3.0.0+betsy.tar.gz -C $TMP
+cd $TMP/nemo-share-3.0.0+betsy
+$TMP/nemo-share-3.0.0+betsy/autogen.sh
 
 make
 make install DESTDIR=$PKG
 
 mkdir -p $PKG/usr/share/doc/$PRGNAM/examples
-cat $TMP/nemo-share-2.8.1+rosa/debian/README.Debian > $PKG/usr/share/doc/$PRGNAM/README
-cat $TMP/nemo-share-2.8.1+rosa/debian/copyright > $PKG/usr/share/doc/$PRGNAM/copyright
-cat $TMP/nemo-share-2.8.1+rosa/debian/smb.conf > $PKG/usr/share/doc/$PRGNAM/examples/smb.conf
+cat $TMP/nemo-share-3.0.0+betsy/debian/README.Debian > $PKG/usr/share/doc/$PRGNAM/README
+cat $TMP/nemo-share-3.0.0+betsy/debian/copyright > $PKG/usr/share/doc/$PRGNAM/copyright
+cat $TMP/nemo-share-3.0.0+betsy/debian/smb.conf > $PKG/usr/share/doc/$PRGNAM/examples/smb.conf
 
 mkdir -p $PKG/usr/doc/$PRGNAM
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM/$PRGNAM.SlackBuild

@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-dropbox
-VERSION=${VERSION:-2.8.0}
+VERSION=${VERSION:-3.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,15 +61,15 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-dropbox/nemo-dropbox_2.8.0+rosa.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-dropbox/nemo-dropbox_3.0.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-dropbox_2.8.0+rosa.tar.gz -C $TMP/
+tar -xvf $TMP/nemo-dropbox_3.0.0+betsy.tar.gz -C $TMP/
 
-cd $TMP/nemo-dropbox-2.8.0+rosa
+cd $TMP/nemo-dropbox-3.0.0+betsy
 
-$TMP/nemo-dropbox-2.8.0+rosa/autogen.sh
+$TMP/nemo-dropbox-3.0.0+betsy/autogen.sh
 
 ./configure
 

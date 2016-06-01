@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=folder-color-switcher
-VERSION=${VERSION:-1.0.7}
+VERSION=${VERSION:-1.0.8}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,31 +61,31 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/f/folder-color-switcher/folder-color-switcher_1.0.7.tar.gz
-mkdir -p $TMP/folder-color-switcher-1.0.7
-tar -xvf $TMP/folder-color-switcher_1.0.7.tar.gz -C $TMP/folder-color-switcher-1.0.7
+wget -c http://packages.linuxmint.com/pool/main/f/folder-color-switcher/folder-color-switcher_1.0.8.tar.gz
+mkdir -p $TMP/folder-color-switcher-1.0.8
+tar -xvf $TMP/folder-color-switcher_1.0.8.tar.gz -C $TMP/folder-color-switcher-1.0.8
 
-cd $TMP/folder-color-switcher-1.0.7/folder-color-switcher
+cd $TMP/folder-color-switcher-1.0.8/folder-color-switcher
 
-$TMP/folder-color-switcher-1.0.7/folder-color-switcher/setup.py build
+$TMP/folder-color-switcher-1.0.8/folder-color-switcher/setup.py build
 
 mkdir $PRGNAM
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/locale
-cp -R $TMP/folder-color-switcher-1.0.7/folder-color-switcher/build/mo/* $PKG/usr/share/locale
+cp -R $TMP/folder-color-switcher-1.0.8/folder-color-switcher/build/mo/* $PKG/usr/share/locale
 
 mkdir -p $PKG/usr/share/doc/folder-color-switcher
-cp $TMP/folder-color-switcher-1.0.7/folder-color-switcher/debian/copyright $PKG/usr/share/doc/folder-color-switcher
+cp $TMP/folder-color-switcher-1.0.8/folder-color-switcher/debian/copyright $PKG/usr/share/doc/folder-color-switcher
 
 mkdir -p $PKG/usr/share/icons/hicolor/22x22/apps
-cp $TMP/folder-color-switcher-1.0.7/folder-color-switcher/icons/* $PKG/usr/share/icons/hicolor/22x22/apps
+cp $TMP/folder-color-switcher-1.0.8/folder-color-switcher/icons/* $PKG/usr/share/icons/hicolor/22x22/apps
 
 mkdir -p $PKG/usr/share/nemo-python/extensions
-cp $TMP/folder-color-switcher-1.0.7/folder-color-switcher/nemo-extensions/nemo-folder-color-switcher.py $PKG/usr/share/nemo-python/extensions
+cp $TMP/folder-color-switcher-1.0.8/folder-color-switcher/nemo-extensions/nemo-folder-color-switcher.py $PKG/usr/share/nemo-python/extensions
 
 mkdir -p $PKG/usr/share/caja-python/extensions
-cp $TMP/folder-color-switcher-1.0.7/folder-color-switcher/caja-extensions/caja-folder-color-switcher.py $PKG/usr/share/caja-python/extensions
+cp $TMP/folder-color-switcher-1.0.8/folder-color-switcher/caja-extensions/caja-folder-color-switcher.py $PKG/usr/share/caja-python/extensions
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild

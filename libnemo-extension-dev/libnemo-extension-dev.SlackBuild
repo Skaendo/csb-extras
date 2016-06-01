@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=libnemo-extension-dev
-VERSION=${VERSION:-3.0.1}
+VERSION=${VERSION:-3.0.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -62,9 +62,9 @@ mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.0.1+betsy_amd64.deb
+wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.0.5+betsy_amd64.deb
 
-ar x $TMP/libnemo-extension-dev_3.0.1+betsy_amd64.deb data.tar.xz
+ar x $TMP/libnemo-extension-dev_3.0.5+betsy_amd64.deb data.tar.xz
 
 tar -xvf $TMP/data.tar.xz -C $PKG
 

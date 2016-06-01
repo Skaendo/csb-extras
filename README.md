@@ -31,6 +31,9 @@ Nemo extensions (included but not functional)
 
  * nemo-seahorse
  
+Others
+
+ * gnome-screenshot
 
 And more to come......
 

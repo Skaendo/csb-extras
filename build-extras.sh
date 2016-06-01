@@ -42,6 +42,7 @@ CSBROOT=$(pwd)
 for dir in \
   nemo-python \
   folder-color-switcher \
+  gnome-screenshot \
   mint-sounds \
   mint-themes \
   mint-themes-gtk3 \

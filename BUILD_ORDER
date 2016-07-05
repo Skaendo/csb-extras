@@ -6,6 +6,7 @@ mint-themes
 mint-themes-gtk3
 mint-x-icons
 libnemo-extension-dev
+*docutils
 nemo-dropbox
 nemo-emblems
 nemo-fileroller

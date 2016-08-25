@@ -51,7 +51,6 @@ for dir in \
   nemo-dropbox \
   nemo-emblems \
   nemo-fileroller \
-  libcryptui \
   nemo-seahorse \
   nemo-share \
   ; do

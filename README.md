@@ -3,6 +3,8 @@ Extras to compliment WillySR's Cinnamon SlackBuilds
 
 These are completely experimental, kludged together and will probably break your system if not entirely blow up your computer. No warranty or guarantees are implied or given.
 
+You will need; libcryptui, python-distutils-extras and docutils installed. They are available on https://slackbuilds.org 
+
 USE AT YOUR OWN RISK!
 
 Now that that is out of the way,
@@ -11,6 +13,7 @@ These addons or extras will add some functionality and style to the Cinnamon Sla
 (I have only tested these on x86_64 arch.)
 
 https://github.com/willysr/csb/tree/development
+
 
 They include;
 

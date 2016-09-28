@@ -3,7 +3,7 @@ Extras to compliment WillySR's Cinnamon SlackBuilds
 
 These are completely experimental, kludged together and will probably break your system if not entirely blow up your computer. No warranty or guarantees are implied or given.
 
-You will need; libcryptui, python-distutils-extras and docutils installed. They are available on https://slackbuilds.org 
+You will need; <a href="https://slackbuilds.org/repository/14.2/libraries/libcryptui/?search=libcryptui">libcryptui</a>, <a href="https://slackbuilds.org/repository/14.2/python/python-distutils-extra/?search=python-distutils">python-distutils-extras</a> and <a href="https://slackbuilds.org/repository/14.2/development/docutils/?search=docutils">docutils</a> installed.
 
 USE AT YOUR OWN RISK!
 

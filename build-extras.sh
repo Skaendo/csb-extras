@@ -44,7 +44,6 @@ for dir in \
   folder-color-switcher \
   gnome-screenshot \
   mint-sounds \
-  mint-themes \
   mint-themes-gtk3 \
   mint-x-icons \
   libnemo-extension-dev \

@@ -19,7 +19,6 @@ They include;
 
  * The sound scheme from Linux Mint 17.x Cinnamon
  * Mint GTK3 themes (Window borders etc.)
- * Mint "X" Themes
  * Mint "X" Icons
  
 Nemo extensions (functional)

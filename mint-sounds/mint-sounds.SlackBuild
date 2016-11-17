@@ -25,7 +25,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-sounds
-VERSION=${VERSION:-5.2}
+VERSION=${VERSION:-5.3}
 ARCH=${ARCH:-noarch}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
@@ -41,13 +41,13 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.2.tar.gz
-tar -xvf mint-artwork-cinnamon_5.2.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.3.tar.gz
+tar -xvf mint-artwork-cinnamon_5.3.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/mint/sounds
-cp -R $TMP/mint-artwork-cinnamon-5.2/usr/share/mint-artwork-cinnamon/sounds \
+cp -R $TMP/mint-artwork-cinnamon-5.3/usr/share/mint-artwork-cinnamon/sounds \
 $PKG/usr/share/mint
 
 mkdir -p $PKG/usr/share/glib-2.0/schemas

@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-share
-VERSION=${VERSION:-3.0.0}
+VERSION=${VERSION:-3.2.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -61,13 +61,13 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_3.0.0+betsy.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_3.2.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-share_3.0.0+betsy.tar.gz -C $TMP
-cd $TMP/nemo-share-3.0.0+betsy
-$TMP/nemo-share-3.0.0+betsy/autogen.sh
+tar -xvf $TMP/nemo-share_3.2.0+betsy.tar.gz -C $TMP
+cd $TMP/nemo-share-3.2.0+betsy
+$TMP/nemo-share-3.2.0+betsy/autogen.sh
 
 make
 make install DESTDIR=$PKG

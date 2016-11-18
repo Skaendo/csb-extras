@@ -50,7 +50,6 @@ for dir in \
   nemo-dropbox \
   nemo-emblems \
   nemo-fileroller \
-  nemo-seahorse \
   nemo-share \
   ; do
   # Get the package name

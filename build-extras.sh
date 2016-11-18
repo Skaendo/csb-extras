@@ -45,6 +45,7 @@ for dir in \
   gnome-screenshot \
   mint-sounds \
   mint-themes-gtk3 \
+  mint-themes \
   mint-x-icons \
   libnemo-extension-dev \
   nemo-dropbox \

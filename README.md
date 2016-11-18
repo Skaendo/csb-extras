@@ -28,10 +28,6 @@ Nemo extensions (functional)
  * nemo-fileroller
  * nemo-python
  * nemo-share (needs testing)
-
-Nemo extensions (included but not functional)
-
- * nemo-seahorse
  
 Others
 

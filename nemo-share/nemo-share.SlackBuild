@@ -73,9 +73,9 @@ make
 make install DESTDIR=$PKG
 
 mkdir -p $PKG/usr/share/doc/$PRGNAM/examples
-cat $TMP/nemo-share-3.0.0+betsy/debian/README.Debian > $PKG/usr/share/doc/$PRGNAM/README
-cat $TMP/nemo-share-3.0.0+betsy/debian/copyright > $PKG/usr/share/doc/$PRGNAM/copyright
-cat $TMP/nemo-share-3.0.0+betsy/debian/smb.conf > $PKG/usr/share/doc/$PRGNAM/examples/smb.conf
+cat $TMP/nemo-share-3.2.0+betsy/debian/README.Debian > $PKG/usr/share/doc/$PRGNAM/README
+cat $TMP/nemo-share-3.2.0+betsy/debian/copyright > $PKG/usr/share/doc/$PRGNAM/copyright
+cat $TMP/nemo-share-3.2.0+betsy/debian/smb.conf > $PKG/usr/share/doc/$PRGNAM/examples/smb.conf
 
 mkdir -p $PKG/usr/doc/$PRGNAM
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM/$PRGNAM.SlackBuild

@@ -1,4 +1,3 @@
-*python-distutils-extra
 nemo-python
 folder-color-switcher
 gnome-screenshot
@@ -7,7 +6,6 @@ mint-themes-gtk3
 mint-themes
 mint-x-icons
 libnemo-extension-dev
-*docutils
 nemo-dropbox
 nemo-emblems
 nemo-fileroller

@@ -48,6 +48,7 @@ for dir in \
   mint-themes \
   mint-x-icons \
   libnemo-extension-dev \
+  docutils \
   nemo-dropbox \
   nemo-emblems \
   nemo-fileroller \

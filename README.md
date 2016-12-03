@@ -12,7 +12,7 @@ These addons or extras will add some functionality and style to the Cinnamon Sla
 
 https://github.com/willysr/csb/tree/development
 
-You will need the following dependencies; <a href="https://slackbuilds.org/repository/14.2/python/python-distutils-extra/?search=python-distutils">python-distutils-extras</a> and <a href="https://slackbuilds.org/repository/14.2/development/docutils/?search=docutils">docutils</a> installed prior to running these scripts.
+You will need the following dependencies; <a href="https://slackbuilds.org/repository/14.2/python/python-distutils-extra/?search=python-distutils">python-distutils-extras</a> installed prior to running these scripts.
 
 Also, <a href="https://slackbuilds.org/repository/14.2/system/file-roller/?search=file-roller">file-roller</a> is required for the nemo-fileroller extension.
 

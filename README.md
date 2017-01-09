@@ -10,7 +10,7 @@ Now that that is out of the way,
 These addons or extras will add some functionality and style to the Cinnamon SlackBuilds by WillySR that can be found here:
 (I have only tested these on x86_64 arch.)
 
-https://github.com/willysr/csb/tree/development
+https://github.com/CinnamonSlackBuilds/csb
 
 You will need the following dependencies; <a href="https://slackbuilds.org/repository/14.2/python/python-distutils-extra/?search=python-distutils">python-distutils-extras</a> installed prior to running these scripts.
 

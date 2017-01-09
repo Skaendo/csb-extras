@@ -40,6 +40,7 @@ CSBROOT=$(pwd)
 
 # Loop for all packages
 for dir in \
+  python-distutils-extra \
   nemo-python \
   folder-color-switcher \
   gnome-screenshot \

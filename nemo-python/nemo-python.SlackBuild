@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Slackware build script for mint-themes
+# Slackware build script for nemo-python
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -36,6 +36,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.2.0+betsy.tar.gz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
 PKG=$TMP/package-$PRGNAM
@@ -61,11 +63,10 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.2.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-python_3.2.0+betsy.tar.gz -C $TMP/
+tar -xvf $CWD/nemo-python_3.2.0+betsy.tar.gz -C $TMP/
 
 $TMP/nemo-python-3.2.0+betsy/autogen.sh
 

@@ -36,6 +36,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget -c http://packages.linuxmint.com/pool/upstream/g/gnome-screenshot/gnome-screenshot_3.18.0-2linuxmint1.tar.xz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
 PKG=$TMP/package-$PRGNAM
@@ -61,11 +63,10 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/upstream/g/gnome-screenshot/gnome-screenshot_3.18.0-2linuxmint1.tar.xz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/gnome-screenshot_3.18.0-2linuxmint1.tar.xz -C $TMP/
+tar -xvf $CWD/gnome-screenshot_3.18.0-2linuxmint1.tar.xz -C $TMP/
 
 cd $TMP/gnome-screenshot-3.18.0
 

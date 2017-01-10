@@ -3,7 +3,7 @@
 # Slackware build script for mint-themes
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-emblems
-VERSION=${VERSION:-3.2.1}
+VERSION=${VERSION:-3.2.3}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -35,6 +35,8 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
+
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-emblems/nemo-emblems_3.2.3.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
@@ -61,8 +63,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-emblems/nemo-emblems_3.2.1.tar.gz
-tar -xvf nemo-emblems_3.2.1.tar.gz
+tar -xvf $CWD/nemo-emblems_3.2.3.tar.gz -C $TMP/
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/nemo-python/extensions

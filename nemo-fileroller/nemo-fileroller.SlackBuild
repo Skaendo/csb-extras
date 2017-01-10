@@ -3,7 +3,7 @@
 # Slackware build script for mint-themes
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-fileroller
-VERSION=${VERSION:-3.2.0}
+VERSION=${VERSION:-3.2.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -35,6 +35,8 @@ if [ -z "$ARCH" ]; then
        *) ARCH=$( uname -m ) ;;
   esac
 fi
+
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-fileroller/nemo-fileroller_3.2.1+betsy.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
@@ -61,13 +63,12 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-fileroller/nemo-fileroller_3.2.0+betsy.tar.gz
 
-tar -xvf $TMP/nemo-fileroller_3.2.0+betsy.tar.gz -C $TMP
+tar -xvf $CWD/nemo-fileroller_3.2.1+betsy.tar.gz -C $TMP
 
-cd $TMP/nemo-fileroller-3.2.0+betsy
+cd $TMP/nemo-fileroller-3.2.1+betsy
 
-$TMP/nemo-fileroller-3.2.0+betsy/autogen.sh
+$TMP/nemo-fileroller-3.2.1+betsy/autogen.sh
 
 ./configure
 

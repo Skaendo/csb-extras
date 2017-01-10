@@ -12,9 +12,6 @@ These addons or extras will add some functionality and style to the Cinnamon Sla
 
 https://github.com/CinnamonSlackBuilds/csb
 
-<a href="https://slackbuilds.org/repository/14.2/system/file-roller/?search=file-roller">file-roller</a> is required for the nemo-fileroller extension.
-
-
 They include;
 
  * The sound scheme from Linux Mint 17.x Cinnamon
@@ -27,7 +24,7 @@ Nemo extensions (functional)
  * nemo-dropbox
  * nemo-emblems
  * nemo-fileroller<br>
- <indent>Requires <a href="https://slackbuilds.org/repository/14.2/system/file-roller/?search=file-roller">file-roller</a></indent>
+ <indent>requires <a href="https://slackbuilds.org/repository/14.2/system/file-roller/?search=file-roller">file-roller</a></indent>
  * nemo-python
  * nemo-share (needs testing)
  

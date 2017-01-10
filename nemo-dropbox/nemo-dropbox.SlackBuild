@@ -36,6 +36,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-dropbox/nemo-dropbox_3.2.0+betsy.tar.gz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
 PKG=$TMP/package-$PRGNAM
@@ -61,11 +63,10 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-dropbox/nemo-dropbox_3.2.0+betsy.tar.gz
 mkdir $PRGNAM
 cd $PRGNAM
 
-tar -xvf $TMP/nemo-dropbox_3.2.0+betsy.tar.gz -C $TMP/
+tar -xvf $CWD/nemo-dropbox_3.2.0+betsy.tar.gz -C $TMP/
 
 cd $TMP/nemo-dropbox-3.2.0+betsy
 

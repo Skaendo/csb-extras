@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for mint-themes
+# Slackware build script for mint-x-themes
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
 # Copyright 2016 Edward Ender <skaendo@excite.com>
@@ -25,7 +25,7 @@
 
 PRGNAM=mint-x-icons
 VERSION=${VERSION:-1.4.0}
-COMMITVER=${COMMITVER:-8ccd67996c35df4be6207e841ebcf3e8fa9d3bef}
+COMMITVER=${COMMITVER:-f8d31c0e0526285fb757623971b7681e19bcd78d}
 ARCH=${ARCH:-noarch}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}

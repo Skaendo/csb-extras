@@ -1,10 +1,9 @@
-
 #!/bin/sh
 
 # Slackware build script for mint-themes
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -25,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-sounds
-VERSION=${VERSION:-5.3}
+VERSION=${VERSION:-5.4}
 ARCH=${ARCH:-noarch}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
@@ -37,17 +36,18 @@ OUTPUT=${OUTPUT:-/tmp}
 
 set -e
 
+wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.4.tar.gz
+
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.3.tar.gz
-tar -xvf mint-artwork-cinnamon_5.3.tar.gz
+tar -xvf $CWD/mint-artwork-cinnamon_5.4.tar.gz -C $TMP/
 mkdir $PRGNAM
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/mint/sounds
-cp -R $TMP/mint-artwork-cinnamon-5.3/usr/share/mint-artwork-cinnamon/sounds \
+cp -R $TMP/mint-artwork-cinnamon-5.4/usr/share/mint-artwork-cinnamon/sounds \
 $PKG/usr/share/mint
 
 mkdir -p $PKG/usr/share/glib-2.0/schemas

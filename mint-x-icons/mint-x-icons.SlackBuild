@@ -2,8 +2,8 @@
 
 # Slackware build script for mint-x-icons
 
-# Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
+# Copyright 2016 Willy Sudiarto Raharjo <willysr@slackware-id.org>
+# Copyright 2017 Ed Ender <skaendo at excite dot com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,30 +24,61 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-x-icons
-VERSION=${VERSION:-1.4.0}
-COMMITVER=${COMMITVER:-8352d7f209054400b7b32fadbbfa76defd9e4294}
-ARCH=${ARCH:-noarch}
+VERSION=${VERSION:-1.4.1}
+COMMITVER=${COMMITVER:-f21d66fc75145808a626d02eb6f1598a323b388d}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i586 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+wget -c https://github.com/linuxmint/mint-x-icons/archive/$COMMITVER.zip
+
 CWD=$(pwd)
-TMP=${TMP:-/tmp/csb}
+TMP=${TMP:-/tmp/endo}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
+
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
 
 set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM
-git clone https://github.com/linuxmint/mint-x-icons.git
-cd $PRGNAM
-git checkout $COMMITVER
+rm -rf $PRGNAM-$COMMITVER
+unzip $CWD/$COMMITVER.zip
+cd $PRGNAM-$COMMITVER
 
 mkdir -p $PKG/usr/share
 rm -rf debian
-rm -rf src
+mv usr/share/icons $PKG/usr/share/
+
+mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
 rm deadlinks
 rm show-diffs
 rm test

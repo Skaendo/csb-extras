@@ -81,33 +81,3 @@ cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
-  LIBDIRSUFFIX=""
-elif [ "$ARCH" = "x86_64" ]; then
-  SLKCFLAGS="-O2 -fPIC"
-  LIBDIRSUFFIX="64"
-else
-  SLKCFLAGS="-O2"
-  LIBDIRSUFFIX=""
-fi
-
-set -e
-
-rm -rf $PKG
-mkdir -p $TMP $PKG $OUTPUT
-cd $TMP
-rm -rf $PRGNAM
-
-ar x $CWD/libnemo-extension-dev_3.2.2+betsy_amd64.deb data.tar.xz $TMP/
-
-tar -xvf $TMP/data.tar.xz -C $PKG
-
-rm $TMP/data.tar.xz
-
-mkdir -p $PKG/usr/doc/$PRGNAM
-cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM/$PRGNAM.SlackBuild
-
-mkdir -p $PKG/install
-cat $CWD/slack-desc > $PKG/install/slack-desc
-
-cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

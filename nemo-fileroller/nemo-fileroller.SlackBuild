@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for nemo
+# Slackware build script for nemo-python
 # Copyright 2017 Ed Ender <skaendo at excite dot com>
 # All rights reserved.
 #
@@ -21,8 +21,8 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-PRGNAM=nemo-fileroller
-VERSION=${VERSION:-3.2.1}
+PRGNAM=nemo-python
+VERSION=${VERSION:-3.2.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-fileroller/nemo-fileroller_3.2.1+betsy.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.2.0+betsy.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/endo}
@@ -61,8 +61,8 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/nemo-fileroller_$VERSION+betsy.tar.gz
-cd nemo-fileroller-$VERSION+betsy
+tar xvf $CWD/nemo-python_$VERSION+betsy.tar.gz
+cd $PRGNAM-$VERSION+betsy
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -96,7 +96,7 @@ find $PKG -name perllocal.pod \
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
-  AUTHORS COPYING ChangeLog NEWS README \
+  AUTHORS COPYING ChangeLog NEWS README docs \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
@@ -104,4 +104,4 @@ mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}

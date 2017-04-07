@@ -5,7 +5,7 @@
 #
 # Copyright 2013 Chess Griffin <chess.griffin@gmail.com> Raleigh, NC
 # Copyright 2013-2014 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
 # All rights reserved.
 #
 # Based on the xfce-build-all.sh script by Patrick J. Volkerding
@@ -32,7 +32,7 @@
 INST=1
 
 # This is where all the compilation and final results will be placed
-TMP=${TMP:-/tmp/csb}
+TMP=${TMP:-/tmp/csbe}
 OUTPUT=${OUTPUT:-/tmp}
 
 # This is the original directory where you started this script
@@ -52,6 +52,7 @@ for dir in \
   docutils \
   nemo-dropbox \
   nemo-emblems \
+  file-roller \
   nemo-fileroller \
   nemo-share \
   ; do

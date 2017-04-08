@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for mint-sounds
+# Slackware build script for mint-themes
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
 # Copyright 2016-2017 Edward Ender <skaendo@excite.com>
@@ -23,38 +23,55 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-PRGNAM=mint-sounds
-VERSION=${VERSION:-5.4}
-ARCH=${ARCH:-noarch}
+PRGNAM=libnemo-extension-dev
+VERSION=${VERSION:-3.2.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-endo}
 
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i586 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.2.2+betsy_amd64.deb
+
 CWD=$(pwd)
-TMP=${TMP:-/tmp/endo}
+TMP=${TMP:-/tmp/csb}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
-set -e
+if [ "$ARCH" = "i586" ]; then
+  SLKCFLAGS="-O2 -march=i586 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
 
-wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.4.tar.gz
+set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-tar -xvf $CWD/mint-artwork-cinnamon_5.4.tar.gz -C $TMP/
-mkdir $PRGNAM
-cd $PRGNAM
 
-mkdir -p $PKG/usr/share/mint/sounds
-cp -R $TMP/mint-artwork-cinnamon-5.4/usr/share/mint-artwork-cinnamon/sounds \
-$PKG/usr/share/mint
+ar x $CWD/libnemo-extension-dev_3.2.2+betsy_amd64.deb data.tar.xz $TMP/
 
-mkdir -p $PKG/usr/share/glib-2.0/schemas
-cat $CWD/sounds.gschema.override > $PKG/usr/share/glib-2.0/schemas/sounds.gschema.override
+tar -xvf $TMP/data.tar.xz -C $PKG
 
-mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+rm $TMP/data.tar.xz
+
+mkdir -p $PKG/usr/doc/$PRGNAM
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc

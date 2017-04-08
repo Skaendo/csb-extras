@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for mint-themes
+# Slackware build script for mint-sounds
 
 # Copyright 2015 Willy Sudiarto Raharjo <willysr@slackware-id.org>
 # Copyright 2016-2017 Edward Ender <skaendo@excite.com>
@@ -42,12 +42,12 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-tar -xvf $CWD/mint-artwork-cinnamon_5.4.tar.gz -C $TMP/
+tar -xvf $CWD/mint-artwork-cinnamon_$VERSION.tar.gz -C $TMP/
 mkdir $PRGNAM
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share/mint/sounds
-cp -R $TMP/mint-artwork-cinnamon-5.4/usr/share/mint-artwork-cinnamon/sounds \
+cp -R $TMP/mint-artwork-cinnamon-$VERSION/usr/share/mint-artwork-cinnamon/sounds \
 $PKG/usr/share/mint
 
 mkdir -p $PKG/usr/share/glib-2.0/schemas

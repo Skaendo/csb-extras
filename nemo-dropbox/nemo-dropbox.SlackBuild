@@ -92,11 +92,6 @@ find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | gr
 find $PKG/usr/man -type f -exec gzip -9 {} \;
 for i in $( find $PKG/usr/man -type l ) ; do ln -s $( readlink $i ).gz $i.gz ; rm $i ; done
 
-find $PKG -name perllocal.pod \
-  -o -name ".packlist" \
-  -o -name "*.bs" \
-  | xargs rm -f
-
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cp -a \
   AUTHORS COPYING ChangeLog NEWS README *.txt \
@@ -108,43 +103,3 @@ cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}
-  LIBDIRSUFFIX=""
-elif [ "$ARCH" = "x86_64" ]; then
-  SLKCFLAGS="-O2 -fPIC"
-  LIBDIRSUFFIX="64"
-else
-  SLKCFLAGS="-O2"
-  LIBDIRSUFFIX=""
-fi
-
-set -e
-
-rm -rf $PKG
-mkdir -p $TMP $PKG $OUTPUT
-cd $TMP
-rm -rf $PRGNAM
-mkdir $PRGNAM
-cd $PRGNAM
-
-tar -xvf $CWD/nemo-dropbox_3.2.0+betsy.tar.gz -C $TMP/
-
-cd $TMP/nemo-dropbox-3.2.0+betsy
-
-$TMP/nemo-dropbox-3.2.0+betsy/autogen.sh
-
-./configure
-
-make
-
-make install DESTDIR=$PKG
-
-gzip -9 /tmp/csb/package-nemo-dropbox/usr/share/man/man1/dropbox.1
-
-mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
-
-mkdir -p $PKG/install
-cat $CWD/slack-desc > $PKG/install/slack-desc
-
-cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

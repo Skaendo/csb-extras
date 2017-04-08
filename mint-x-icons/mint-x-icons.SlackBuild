@@ -66,12 +66,11 @@ rm -rf $PRGNAM-$COMMITVER
 unzip $CWD/$COMMITVER.zip
 cd $PRGNAM-$COMMITVER
 
-mkdir -p $PKG/usr/share/icons
+mkdir -p $PKG/usr/share
 rm -rf debian
-mv usr/share/icons/Mint-Y $PKG/usr/share/icons/
+mv usr/share/icons $PKG/usr/share
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp README.md $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install

@@ -86,32 +86,3 @@ cat $CWD/slack-desc > $PKG/install/slack-desc
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}
-  LIBDIRSUFFIX=""
-elif [ "$ARCH" = "x86_64" ]; then
-  SLKCFLAGS="-O2 -fPIC"
-  LIBDIRSUFFIX="64"
-else
-  SLKCFLAGS="-O2"
-  LIBDIRSUFFIX=""
-fi
-
-set -e
-
-rm -rf $PKG
-mkdir -p $TMP $PKG $OUTPUT
-cd $TMP
-rm -rf $PRGNAM
-tar -xvf $CWD/nemo-emblems_3.2.3.tar.gz -C $TMP/
-cd $PRGNAM
-
-mkdir -p $PKG/usr/share/nemo-python/extensions
-mv /tmp/csb/nemo-emblems/nemo-extension/nemo-emblems.py $PKG/usr/share/nemo-python/extensions
-
-mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
-
-mkdir -p $PKG/install
-cat $CWD/slack-desc > $PKG/install/slack-desc
-
-cd $PKG
-/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

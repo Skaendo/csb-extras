@@ -36,8 +36,6 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.2.2+betsy_$SRCARCH.deb
-
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csb}
 PKG=$TMP/package-$PRGNAM
@@ -60,6 +58,8 @@ else
   LIBDIRSUFFIX=""
   SRCARCH="i386"
 fi
+
+wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.2.2+betsy_$SRCARCH.deb
 
 set -e
 

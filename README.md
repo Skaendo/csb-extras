@@ -23,8 +23,7 @@ Nemo extensions (functional)
 
  * nemo-dropbox
  * nemo-emblems
- * nemo-fileroller<br>
- <indent>requires <a href="https://slackbuilds.org/repository/14.2/system/file-roller/?search=file-roller">file-roller</a></indent>
+ * nemo-fileroller
  * nemo-python
  * nemo-share (needs testing)
  

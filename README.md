@@ -14,7 +14,7 @@ https://github.com/CinnamonSlackBuilds/csb
 
 They include;
 
- * The sound scheme from Linux Mint 17.x Cinnamon
+ * The sound scheme from Linux Mint
  * Mint GTK3 themes (Window borders etc.)
  * Mint "X" Themes
  * Mint "X" Icons

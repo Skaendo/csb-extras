@@ -24,7 +24,7 @@
 PRGNAM=nemo-fileroller
 VERSION=${VERSION:-3.2.1}
 BUILD=${BUILD:-1}
-TAG=${TAG:-endo}
+TAG=${TAG:-csbe}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -37,7 +37,7 @@ fi
 wget -c http://packages.linuxmint.com/pool/main/n/nemo-fileroller/nemo-fileroller_3.2.1+betsy.tar.gz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/endo}
+TMP=${TMP:-/tmp/csbe}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 

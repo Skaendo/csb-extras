@@ -25,7 +25,7 @@
 PRGNAM=python-distutils-extra
 VERSION=${VERSION:-2.39}
 BUILD=${BUILD:-1}
-TAG=${TAG:-endo}
+TAG=${TAG:-csbe}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -38,7 +38,7 @@ fi
 wget -c https://launchpad.net/python-distutils-extra/trunk/2.39/+download/python-distutils-extra-2.39.tar.gz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/SBo}
+TMP=${TMP:-/tmp/csbe}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 

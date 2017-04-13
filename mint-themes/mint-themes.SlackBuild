@@ -2,7 +2,7 @@
 
 # Slackware build script for mint-themes
 
-# Copyright 2017 Ed Ender <skaendo at excite dot com>
+# Copyright 2017 skaendo <skaendo at excite dot com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -26,7 +26,7 @@ PRGNAM=mint-themes
 VERSION=${VERSION:-1.4.8}
 COMMITVER=${COMMITVER:-92f8017be565074c79add346f4e344cbb7ed60db}
 BUILD=${BUILD:-1}
-TAG=${TAG:-endo}
+TAG=${TAG:-csbe}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -39,7 +39,7 @@ fi
 wget -c https://github.com/linuxmint/mint-themes/archive/$COMMITVER.zip
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/endo}
+TMP=${TMP:-/tmp/csbe}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 

@@ -5,6 +5,6 @@ DOWNLOAD="http://packages.linuxmint.com/pool/main/n/nemo-emblems/nemo-emblems_3.
 MD5SUM="0bc81f52ad9cfbdade434f3ff20ce87b"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""
-REQUIRES=""
+REQUIRES="python-distutils-extra"
 MAINTAINER="skaendo"
 EMAIL="skaendo at excite dot com"

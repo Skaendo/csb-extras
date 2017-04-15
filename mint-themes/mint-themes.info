@@ -1,7 +1,7 @@
 PRGNAM="mint-themes"
 VERSION="1.4.8"
 HOMEPAGE=""
-DOWNLOAD="https://github.com/linuxmint/mint-themes-gtk3/archive/92f8017be565074c79add346f4e344cbb7ed60db.zip"
+DOWNLOAD="https://github.com/linuxmint/mint-themes/archive/92f8017be565074c79add346f4e344cbb7ed60db.zip"
 MD5SUM="0c09b9a2cbdebafde4c2aaab78543ca7"
 DOWNLOAD_x86_64=""
 MD5SUM_x86_64=""

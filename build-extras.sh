@@ -55,6 +55,7 @@ for dir in \
   file-roller \
   nemo-fileroller \
   nemo-share \
+  dmz-cursor-theme \
   ; do
   # Get the package name
   package=$(echo $dir | cut -f2- -d /)

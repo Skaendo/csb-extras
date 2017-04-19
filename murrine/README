@@ -4,3 +4,6 @@ Murrine is an Italian word meaning colored glass patterns made by Venetian
 glass makers.  Murrine is a gtk2 engine that will make your desktop look
 like a beautiful Murrina (which is the italian singular of Murrine).
 
+*csb-extras note*
+This fixes some non-critical errors due to something in Willy's 
+Cinnamon SlackBuilds calling for murrine.

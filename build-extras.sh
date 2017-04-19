@@ -40,6 +40,7 @@ CSBROOT=$(pwd)
 
 # Loop for all packages
 for dir in \
+  murrine \
   python-distutils-extra \
   nemo-python \
   folder-color-switcher \

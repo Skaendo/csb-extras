@@ -23,8 +23,8 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-themes-gtk3
-VERSION=${VERSION:-3.18+12}
-COMMITVER=${COMMITVER:-7d2c9865c5cad969b2e6f95d7ab7f5fe17f21d01}
+SRCNAM=mint-themes-gtk3_
+VERSION=${VERSION:-3.18+14}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -36,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://github.com/linuxmint/mint-themes-gtk3/archive/$COMMITVER.zip
+wget -c http://packages.linuxmint.com/pool/main/m/mint-themes-gtk3/$SRCNAM$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
@@ -62,13 +62,13 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$COMMITVER
-unzip $CWD/$COMMITVER.zip
-cd $PRGNAM-$COMMITVER
+rm -rf $PRGNAM
+tar xvf $CWD/$SRCNAM$VERSION.tar.xz
+cd $PRGNAM
 
 mkdir -p $PKG/usr/share
 rm -rf debian
-mv usr/share/themes $PKG/usr/share
+mv $TMP/$PRGNAM/usr/share/themes $PKG/usr/share
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild

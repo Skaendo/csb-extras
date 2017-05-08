@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Slackware build script for folder-color
+# Slackware build script for folder-color-switcher
 # Copyright 2017 skaendo <skaendo at excite dot com>
 # All rights reserved.
 #
@@ -22,9 +22,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=folder-color-switcher
-VERSION=${VERSION:-1.1.3}
+VERSION=${VERSION:-1.1.4}
 BUILD=${BUILD:-1}
-TAG=${TAG:-csbe}
+TAG=${TAG:-lmse}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -34,10 +34,10 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/f/folder-color-switcher/folder-color-switcher_1.1.3.tar.gz
+wget -c https://github.com/linuxmint/$PRGNAM/archive/$VERSION/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/csbe}
+TMP=${TMP:-/tmp/lmse}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
@@ -61,8 +61,8 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/folder-color-switcher_$VERSION.tar.gz
-cd $PRGNAM
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -74,7 +74,7 @@ python setup.py install --root=$PKG
 
 # Copy the icons over
 mkdir -p $PKG/usr/share/icons/hicolor/22x22/apps
-cp $TMP/folder-color-switcher/icons/* $PKG/usr/share/icons/hicolor/22x22/apps
+cp $TMP/$PRGNAM-$VERSION/icons/* $PKG/usr/share/icons/hicolor/22x22/apps
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true

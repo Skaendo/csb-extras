@@ -23,10 +23,10 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-x-icons
-VERSION=${VERSION:-1.0.4}
-COMMITVER=${COMMITVER:-5fe7f7f12fa1451383cd1733b6469657055726d5}
+SRCNAM=mint-x-icons_
+VERSION=${VERSION:-1.4.2}
 BUILD=${BUILD:-1}
-TAG=${TAG:-csbe}
+TAG=${TAG:-lmse}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -36,10 +36,10 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://github.com/linuxmint/mint-x-icons/archive/$COMMITVER.zip
+wget -c http://packages.linuxmint.com/pool/main/m/$PRGNAM/$SRCNAM$VERSION.tar.xz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/csbe}
+TMP=${TMP:-/tmp/lmse}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
@@ -62,9 +62,9 @@ set -e
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$COMMITVER
-unzip $CWD/$COMMITVER.zip
-cd $PRGNAM-$COMMITVER
+rm -rf $PRGNAM
+tar -xvf $CWD/$SRCNAM$VERSION.tar.xz
+cd $PRGNAM
 
 mkdir -p $PKG/usr/share
 rm -rf debian

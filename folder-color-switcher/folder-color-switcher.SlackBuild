@@ -24,7 +24,7 @@
 PRGNAM=folder-color-switcher
 VERSION=${VERSION:-1.1.4}
 BUILD=${BUILD:-1}
-TAG=${TAG:-lmse}
+TAG=${TAG:-csbe}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
@@ -37,7 +37,7 @@ fi
 wget -c https://github.com/linuxmint/$PRGNAM/archive/$VERSION/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
-TMP=${TMP:-/tmp/lmse}
+TMP=${TMP:-/tmp/csbe}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 

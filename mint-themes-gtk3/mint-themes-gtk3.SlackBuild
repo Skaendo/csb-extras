@@ -24,7 +24,7 @@
 
 PRGNAM=mint-themes-gtk3
 SRCNAM=mint-themes-gtk3_
-VERSION=${VERSION:-3.18+14}
+VERSION=${VERSION:-3.18+15}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 

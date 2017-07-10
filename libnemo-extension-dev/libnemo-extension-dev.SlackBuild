@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=libnemo-extension-dev
-VERSION=${VERSION:-3.2.2}
+VERSION=${VERSION:-3.4.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -59,7 +59,7 @@ else
   SRCARCH="i386"
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.2.2+betsy_$SRCARCH.deb
+wget -c http://packages.linuxmint.com/pool/main/n/nemo/libnemo-extension-dev_3.4.6+betsy_$SRCARCH.deb
 
 set -e
 
@@ -68,7 +68,7 @@ mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
 
-ar x $CWD/libnemo-extension-dev_3.2.2+betsy_$SRCARCH.deb data.tar.xz $TMP/
+ar x $CWD/libnemo-extension-dev_3.4.6+betsy_$SRCARCH.deb data.tar.xz $TMP/
 
 tar -xvf $TMP/data.tar.xz -C $PKG
 

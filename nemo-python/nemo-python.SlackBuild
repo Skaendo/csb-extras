@@ -22,7 +22,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=nemo-python
-VERSION=${VERSION:-3.2.0}
+VERSION=${VERSION:-3.4.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.2.0+betsy.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-python/nemo-python_3.4.0+betsy.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}

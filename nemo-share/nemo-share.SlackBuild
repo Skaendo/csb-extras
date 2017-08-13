@@ -34,7 +34,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_3.4.1+betsy.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/n/nemo-share/nemo-share_3.4.2+betsy.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}

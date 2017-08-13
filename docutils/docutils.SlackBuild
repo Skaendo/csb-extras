@@ -34,6 +34,8 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
+wget -c http://downloads.sourceforge.net/docutils/docutils-0.14.tar.gz
+
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
 PKG=$TMP/package-$PRGNAM

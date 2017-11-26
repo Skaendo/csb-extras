@@ -24,7 +24,7 @@
 
 PRGNAM=mint-x-icons
 SRCNAM=mint-x-icons_
-VERSION=${VERSION:-1.4.3}
+VERSION=${VERSION:-1.4.6}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 

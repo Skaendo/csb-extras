@@ -24,7 +24,7 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-sounds
-VERSION=${VERSION:-5.5}
+VERSION=${VERSION:-5.7}
 ARCH=${ARCH:-noarch}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
@@ -36,7 +36,7 @@ OUTPUT=${OUTPUT:-/tmp}
 
 set -e
 
-wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.5.tar.gz
+wget -c http://packages.linuxmint.com/pool/main/m/mint-artwork-cinnamon/mint-artwork-cinnamon_5.7.tar.gz
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT

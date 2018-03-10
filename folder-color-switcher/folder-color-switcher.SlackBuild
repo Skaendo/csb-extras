@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Slackware build script for folder-color-switcher
-# Copyright 2017-2018 skaendo <skaendo at excite dot com>
+# Slackware build script for folder-color
+# Copyright 2017-2018 Skaendo <skaendo at excite dot com>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -22,27 +22,28 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=folder-color-switcher
-VERSION=${VERSION:-1.1.7}
+SRCNAM=folder-color-switcher_
+VERSION=${VERSION:-1.2.1}
 BUILD=${BUILD:-1}
-TAG=${TAG:-csbe}
+TAG=${TAG:-cslk}
 
 ARCH=noarch
 
-wget -c https://github.com/linuxmint/$PRGNAM/archive/$VERSION/$PRGNAM-$VERSION.tar.gz
-
 CWD=$(pwd)
-TMP=${TMP:-/tmp/csbe}
+TMP=${TMP:-/tmp/cslk}
 PKG=$TMP/package-$PRGNAM
 OUTPUT=${OUTPUT:-/tmp}
 
 set -e
 
+wget -c http://packages.linuxmint.com/pool/main/f/$PRGNAM/$SRCNAM$VERSION.tar.gz
+
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
-rm -rf $PRGNAM-$VERSION
-tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
-cd $PRGNAM-$VERSION
+rm -rf $PRGNAM
+tar xvf $CWD/$SRCNAM$VERSION.tar.gz
+cd $PRGNAM
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
@@ -50,19 +51,18 @@ find -L . \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
 
-python setup.py install --root=$PKG
+sed -i "s|usr|$PKG/usr|" Makefile
 
-# Copy the icons over
-mkdir -p $PKG/usr/share/icons/hicolor/22x22/apps
-cp $TMP/$PRGNAM-$VERSION/icons/* $PKG/usr/share/icons/hicolor/22x22/apps
+make
+
+rm -rf ./usr/share/caja-python
+cp -vr usr $PKG
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a \
-  COPYING.GPL3 \
-  $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a COPYING.GPL3 $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install

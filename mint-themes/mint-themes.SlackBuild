@@ -23,7 +23,7 @@
 
 PRGNAM=mint-themes
 SRCNAM=mint-themes_
-VERSION=${VERSION:-1.6.1}
+VERSION=${VERSION:-1.6.4}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 

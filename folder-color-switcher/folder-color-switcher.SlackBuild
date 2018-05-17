@@ -23,7 +23,7 @@
 
 PRGNAM=folder-color-switcher
 SRCNAM=folder-color-switcher_
-VERSION=${VERSION:-1.2.1}
+VERSION=${VERSION:-1.2.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-cslk}
 

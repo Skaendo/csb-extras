@@ -1,6 +1,8 @@
 # csb-extras
 Extras to compliment WillySR's Cinnamon SlackBuilds
 
+Please make sure that you are following the correct branch! Master follows Slackware-current.
+
 These are completely experimental, kludged together and will probably break your system if not entirely blow up your computer. No warranty or guarantees are implied or given.
 
 USE AT YOUR OWN RISK!

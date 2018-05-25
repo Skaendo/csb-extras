@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Slackware build script for file-roller
+
 # Copyright 2017-2018 skaendo <skaendo at excite dot com>
 # All rights reserved.
 #
@@ -10,7 +11,7 @@
 # 1. Redistributions of this script must retain the above copyright
 #    notice, this list of conditions and the following disclaimer.
 #
-# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ''AS IS'' AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
 # EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
@@ -22,7 +23,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=file-roller
-VERSION=${VERSION:-3.24.1}
+VERSION=${VERSION:-3.28.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -34,7 +35,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://download.gnome.org/sources/$PRGNAM/3.24/$PRGNAM-$VERSION.tar.xz
+wget -c https://download.gnome.org/sources/$PRGNAM/3.28/$PRGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
@@ -68,32 +69,33 @@ find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
   -o -perm 511 \) -exec chmod 755 {} \; -o \
  \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
- -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+mkdir build
+cd build
 
 CFLAGS="$SLKCFLAGS" \
 CXXFLAGS="$SLKCFLAGS" \
-./configure \
+meson .. \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
   --mandir=/usr/man \
-  --infodir=/usr/info \
-  --docdir=/usr/doc/$PRGNAM-$VERSION \
-  --localedir=/usr/share/locale \
-  --disable-static \
-  --build=$ARCH-slackware-linux
+  -Denable-packagekit=false \
+  -Denable-nautilus-actions=false \
+  --buildtype=release
 
-make
-make install DESTDIR=$PKG
+ninja
+DESTDIR=$PKG ninja install
+
+cd ..
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
-cp -a \
-  AUTHORS COPYING ChangeLog HACKING INSTALL MAINTAINERS NEWS README \
-    README_COMMANDLINE TODO \
+cp -a AUTHORS COPYING HACKING MAINTAINERS NEWS README* *.txt \
   $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 

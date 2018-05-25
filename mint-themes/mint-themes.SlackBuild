@@ -23,7 +23,7 @@
 
 PRGNAM=mint-themes
 SRCNAM=mint-themes_
-VERSION=${VERSION:-1.6.4}
+VERSION=${VERSION:-1.5.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -45,9 +45,9 @@ rm -rf $PRGNAM
 tar xvf $CWD/$SRCNAM$VERSION.tar.xz
 cd $PRGNAM
 
-python3 generate-themes.py
-
-cp -vr usr $PKG
+mkdir -p $PKG/usr/share
+-rm -rf debian
+-mv $TMP/$PRGNAM/usr/share/themes $PKG/usr/share
 
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild

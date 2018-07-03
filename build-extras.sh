@@ -5,7 +5,7 @@
 #
 # Copyright 2013 Chess Griffin <chess.griffin@gmail.com> Raleigh, NC
 # Copyright 2013-2014 Willy Sudiarto Raharjo <willysr@slackware-id.org>
-# Copyright 2016-2017 Edward Ender <skaendo@excite.com>
+# Copyright 2016-2017 Skaendo <skaendo@linuxmail.org>
 # All rights reserved.
 #
 # Based on the xfce-build-all.sh script by Patrick J. Volkerding

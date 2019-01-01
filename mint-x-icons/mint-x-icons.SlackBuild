@@ -2,7 +2,7 @@
 
 # Slackware build script for mint-x-icons
 
-# Copyright 2016-2018 Skaendo <skaendo@linuxmail.org>
+# Copyright 2016-2019 Skaendo <skaendo@linuxmail.org>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,14 +23,13 @@
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=mint-x-icons
-SRCNAM=mint-x-icons_
-VERSION=${VERSION:-1.4.8}
+VERSION=${VERSION:-1.5.1}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
 ARCH=noarch
 
-wget -c http://packages.linuxmint.com/pool/main/m/$PRGNAM/$SRCNAM$VERSION.tar.xz
+wget -c http://packages.linuxmint.com/pool/main/m/$PRGNAM/${PRGNAM}_${VERSION}.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
@@ -43,7 +42,7 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
-tar -xvf $CWD/$SRCNAM$VERSION.tar.xz
+tar -xvf $CWD/${PRGNAM}_${VERSION}.tar.xz
 cd $PRGNAM
 
 mkdir -p $PKG/usr/share

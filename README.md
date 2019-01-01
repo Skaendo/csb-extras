@@ -17,8 +17,6 @@ https://github.com/CinnamonSlackBuilds/csb
 They include;
 
  * The sound scheme from Linux Mint
- * Mint GTK3 themes (Window borders etc.)
- * Mint "X" Themes
  * Mint "X" Icons
  
 Nemo extensions (functional)
@@ -33,13 +31,8 @@ Others
 
  * gnome-screenshot
 
-And more to come......
-
 More info about these addons and extensions can be found here:<br>
 https://github.com/linuxmint
-
-<br>
-If you look at the scripts you will notice that I am not very good at building SlackBuild scripts, so tips, pointers and tutoring appreciated and welcomed.<br>
 <br>
 
 Slackware Linux is a registered trademark of Patrick Volkerding and Slackware Linux, Inc.<br>

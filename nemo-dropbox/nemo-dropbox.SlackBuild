@@ -2,7 +2,7 @@
 
 # Slackware build script for nemo-dropbox
 
-# Copyright 2017-2018 Skaendo <skaendo@linuxmail.org>
+# Copyright 2017-2019 Skaendo <skaendo@linuxmail.org>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 
 PRGNAM=nemo-dropbox
 SRCNAM=nemo-extensions
-VERSION=${VERSION:-3.8.0}
+VERSION=${VERSION:-4.0.0}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 

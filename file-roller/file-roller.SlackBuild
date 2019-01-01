@@ -2,7 +2,7 @@
 
 # Slackware build script for file-roller
 
-# Copyright 2017-2018 Skaendo <skaendo@linuxmail.org>
+# Copyright 2017-2019 Skaendo <skaendo@linuxmail.org>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -23,7 +23,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 PRGNAM=file-roller
-VERSION=${VERSION:-3.28.0}
+VERSION=${VERSION:-3.30.1}
+MAJOR=${MAJOR:-3.30}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -35,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://download.gnome.org/sources/$PRGNAM/3.28/$PRGNAM-$VERSION.tar.xz
+wget -c http://ftp.gnome.org/pub/gnome/sources/$PRGNAM/$MAJOR/$PRGNAM-$VERSION.tar.xz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
@@ -81,8 +82,6 @@ meson .. \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc \
   --localstatedir=/var \
-  -Denable-packagekit=false \
-  -Denable-nautilus-actions=false \
   --buildtype=release
 
 ninja
@@ -100,7 +99,6 @@ cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
 
 mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
-cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
 cd $PKG
 /sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-txz}

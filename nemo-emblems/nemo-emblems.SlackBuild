@@ -2,7 +2,7 @@
 
 # Slackware build script for nemo-emblems
 
-# Copyright 2017-2018 Skaendo <skaendo@linuxmail.org>
+# Copyright 2017-2019 Skaendo <skaendo@linuxmail.org>
 # All rights reserved.
 #
 # Redistribution and use of this script, with or without modification, is
@@ -24,7 +24,7 @@
 
 PRGNAM=nemo-emblems
 SRCNAM=nemo-extensions
-VERSION=${VERSION:-3.8.0}
+VERSION=${VERSION:-4.0.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-csbe}
 
@@ -36,7 +36,7 @@ if [ -z "$ARCH" ]; then
   esac
 fi
 
-wget -c https://github.com/linuxmint/$SRCNAM/archive/$VERSION/$SRCNAM-$VERSION.tar.gz
+wget -c https://github.com/linuxmint/$SRCNAM/archive/$PRGNAM-$VERSION.tar.gz
 
 CWD=$(pwd)
 TMP=${TMP:-/tmp/csbe}
@@ -63,8 +63,8 @@ rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $SRCNAM-$VERSION
-tar xvf $CWD/$SRCNAM-$VERSION.tar.gz
-cd $SRCNAM-$VERSION/$PRGNAM
+tar xvf $CWD/$PRGNAM-$VERSION.tar.gz
+cd $SRCNAM-$PRGNAM-$VERSION/$PRGNAM
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
